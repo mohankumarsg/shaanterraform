@@ -1,10 +1,14 @@
-resource "aws_key_pair" "terraformkey" {
+resource "aws_key_pair" "terraformkey2" {
   key_name   = var.key_name
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 email@example.com"
+  public_key = var.public_key
 }
 
 output "testkey" {
-  value = aws_key_pair.terraformkey.key_name
+  value = aws_key_pair.terraformkey2.key_name
 
 }
 
+output "testkey2" {
+  value = aws_key_pair.terraformkey2.public_key
+
+}
