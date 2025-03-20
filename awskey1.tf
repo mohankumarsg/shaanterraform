@@ -4,11 +4,13 @@ resource "aws_key_pair" "terraformkey2" {
 }
 
 output "testkey" {
-  value = aws_key_pair.terraformkey2.key_name
+  value = var.key_name
 
 }
 
-output "testkey2" {
-  value = aws_key_pair.terraformkey2.public_key
+#output "testkey2" {
+#value = aws_key_pair.terraformkey2.public_key
 
-}
+#}
+
+
