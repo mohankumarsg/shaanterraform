@@ -8,9 +8,9 @@ output "testkey" {
 
 }
 
-#output "testkey2" {
-#value = aws_key_pair.terraformkey2.public_key
+output "testkey2" {
+  value = aws_key_pair.terraformkey2.public_key
 
-#}
+}
 
 
